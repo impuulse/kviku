@@ -92,7 +92,7 @@ class User extends \yii\db\ActiveRecord
 
     public function afterValidate()
     {
-        if (!empty($this->passport)) {
+        if (!empty($this->birthday)) {
             $this->birthday = date('Y-m-d', strtotime($this->birthday));
         }
         parent::afterValidate();
